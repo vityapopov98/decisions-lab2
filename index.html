@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700,800,800i|Roboto+Condensed:300,400&display=swap&subset=cyrillic" rel="stylesheet">
+   
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    
+
+    <script src="script.js"></script>
+
+    <title>Decisions 2 lab</title>
+</head>
+<body>
+  <header>
+    Decisions lab 2
+  </header>
+  <div class="content">
+
+    <div class="container ">
+      <div class="row">
+        <div class="col-md-12">
+          <h1>Принятие решений классическими и&nbsp;производными критериальными методами</h1>
+          <p>E - Варианты решения</p>
+          <p>Е1 – осуществить полную проверку машины в сервисном центре;<br>
+            Е2 – провести проверку и возможный ремонт своими силами;<br>
+            E3 – договориться на проверку и ремонт с другом/родственником;<br>
+            Е4 – вообще отказаться от какой-либо проверки и продолжать ездить на машине.</p><br>
+          <p>F - Условия требующие рассмотрения</p>
+          <p>F1 – неисправностей нет и машина может ездить без какого-либо ремонта;<br>
+            F2 – требуется незначительный ремонт отдельных деталей;<br>
+            F3 – машина уже скоро сломается, ездить опасно.<br>
+            F4 – дальнейшая эксплуатация машины возможна лишь после ка­питального ремонта.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="control-block">
+            <p class="text-muted">Введите значения в таблицу, что бы рассчитать, <br> или воспользуйтесь тестовыми примерами. </p>
+            <button class="btn btn-outline-secondary btn-sm" onclick="example(1)">Пример 1</button>
+            <button class="btn btn-outline-secondary btn-sm" onclick="example(2)">Пример 2</button>
+          </div>
+          <div id="example-place">
+
+            <table class="table table-bordered table-responsive" id="table">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">F1</th>
+                  <th scope="col">F2</th>
+                  <th scope="col">F3</th>
+                  <th scope="col">F4</th>
+                </tr>
+              </thead>
+            <tbody>
+              <tr>
+                <th scope="row">E0</th>
+                <td>
+                  <input type="text" id="00" value="-450">
+                </td>
+                <td>
+                  <input type="text" id="01" value="-5000">
+                </td>
+                <td>
+                  <input type="text" id="02" value="-10000">
+                </td>
+                <td>
+                  <input type="text" id="03" value="-25000">
+                </td>
+              </tr>
+              
+              <tr>
+                <th scope="row">E1</th>
+                <td>
+                  <input type="text" id="10" value="-1000">
+                </td>
+                <td>
+                  <input type="text" id="11" value="-2480">
+                </td>
+                <td>
+                  <input type="text" id="12" value="-5000">
+                </td>
+                <td>
+                  <input type="text" id="13" value="-10000">
+                </td>
+              </tr>
+    
+              <tr>
+                <th scope="row">E2</th>
+                <td>
+                  <input type="text" id="20" value="-200">
+                </td>
+                <td>
+                  <input type="text" id="21" value="-1500">
+                </td>
+                <td>
+                  <input type="text" id="22" value="-3000">
+                </td>
+                <td>
+                  <input type="text" id="23" value="-5000">
+                </td>
+              </tr>
+    
+              <tr>
+                <th scope="row">E3</th>
+                <td>
+                  <input type="text" id="30" value="0">
+                </td>
+                <td>
+                  <input type="text" id="31" value="-500">
+                </td>
+                <td>
+                  <input type="text" id="32" value="-1000">
+                </td>
+                <td>
+                  <input type="text" id="33" value="-2000">
+                </td>
+              </tr>
+              </tbody>
+            </table>
+            <!-- <table class="table table-bordered table-responsive" id="table">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">F1</th>
+                  <th scope="col">F2</th>
+                  <th scope="col">F3</th>
+                  <th scope="col">F4</th>
+                </tr>
+              </thead>
+            <tbody>
+              <tr>
+                <th scope="row">E0</th>
+                <td>
+                  <input type="text" id="00" value="5">
+                </td>
+                <td>
+                  <input type="text" id="01" value="30">
+                </td>
+                <td>
+                  <input type="text" id="02" value="50">
+                </td>
+                <td>
+                  <input type="text" id="03" value="85">
+                </td>
+              </tr>
+              
+              <tr>
+                <th scope="row">E1</th>
+                <td>
+                  <input type="text" id="10" value="10">
+                </td>
+                <td>
+                  <input type="text" id="11" value="38">
+                </td>
+                <td>
+                  <input type="text" id="12" value="60">
+                </td>
+                <td>
+                  <input type="text" id="13" value="90">
+                </td>
+              </tr>
+    
+              <tr>
+                <th scope="row">E2</th>
+                <td>
+                  <input type="text" id="20" value="15">
+                </td>
+                <td>
+                  <input type="text" id="21" value="46">
+                </td>
+                <td>
+                  <input type="text" id="22" value="70">
+                </td>
+                <td>
+                  <input type="text" id="23" value="95">
+                </td>
+              </tr>
+    
+              <tr>
+                <th scope="row">E3</th>
+                <td>
+                  <input type="text" id="30" value="20">
+                </td>
+                <td>
+                  <input type="text" id="31" value="54">
+                </td>
+                <td>
+                  <input type="text" id="32" value="80">
+                </td>
+                <td>
+                  <input type="text" id="33" value="100">
+                </td>
+              </tr>
+              </tbody>
+            </table> -->
+          </div>
+          </div>
+        </div>
+        <button class="btn btn-primary" onclick="calculate()">Рассчитать</button>
+        <div class="results">
+          <h4>Минимаксный:</h4>
+          <p id="MM"></p>
+          <h4>Байеса-Лапласа:</h4>
+          <p id="BL"></p>
+          <h4>Гермейера:</h4>
+          <p id="G"></p>
+          <h4>Гурвица:</h4>
+          <p id="Gur"></p>
+          <h4>Сэвиджа:</h4>
+          <p id="Sev"></p>
+          <h4>Ходжа-Лемана:</h4>
+          <p id="HL"></p>
+          <h4>Составной Байеса-Лапласа:</h4>
+          <p id="SBL"></p>
+          <h4>Произведений:</h4>
+          <p id="PRO"></p>
+        </div>
+      </div>
+  </div>
+
+
+
+    <script src="//ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+</body>
+</html>
